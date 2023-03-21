@@ -1,6 +1,7 @@
 import time
 
 from fastapi import FastAPI, APIRouter
+from fastapi.middleware.cors import CORSMiddleware
 
 from embeddings.embeddings import PoemSearch
 from schemas import SearchQuery, ModelResponse
@@ -8,6 +9,16 @@ from schemas import SearchQuery, ModelResponse
 # setup fastapi
 app = FastAPI(title="Poem Search", openapi_url="/openapi.json")
 api_router = APIRouter()
+
+origins = ["*"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # setup semantic search
 device = "cpu"
