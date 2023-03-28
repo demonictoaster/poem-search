@@ -26,11 +26,14 @@ function PoemSearch() {
     <div>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Give me a poem about... </label>
-        <input
+        <br></br>
+        <textarea
           type="text"
           value={query}
-          onChange={(e) => setQuery(e.target.value)} />
-          <button type="submit">Submit</button>
+          onChange={(e) => setQuery(e.target.value)}
+        />
+        <br></br>
+        <button type="submit">Search</button>
       </form>
       <Display result={data} />
     </div>
