@@ -16,13 +16,13 @@ body {
 }
 
 /* Use a dark brown color for headings */
-h1, h2, h3 {
+h1 {
   color: #EB455F;
   padding-bottom: 5px;
 }
 
 /* Use a lighter brown color for paragraphs */
-p {
+h2 {
   color: #2B3467;
   padding-bottom: 20px;
 }
@@ -45,5 +45,6 @@ pre {
   margin-right: 10px;
   margin-bottom: 30px;
   white-space: pre-wrap;
+  line-height: 150%;
 }
 

@@ -44,8 +44,8 @@ async def predict(input: SearchQuery) -> ModelResponse:
         title = entry['title'].item(),
         author = entry['poet'].item(),
         poem = entry['poem'].item(),
-        score = score,
-        time = time_spent,
+        score = round(score, 2),
+        time = round(time_spent, 2),
     )
     return response
 

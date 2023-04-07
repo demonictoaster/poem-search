@@ -35,7 +35,9 @@ function PoemSearch() {
         <br></br>
         <button type="submit">Search</button>
       </form>
-      <Display result={data} />
+      {data && (
+        <Display result={data} />
+      )}
     </div>
   )
 }
