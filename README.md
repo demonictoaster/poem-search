@@ -15,5 +15,7 @@ To run the backend container run:
 Same procedure:
 
 `cd frontend`
+
 `docker build -t poem-search-frontend .`
+
 `docker run -d --name frontend -p 3000:80 poem-search-frontend`
