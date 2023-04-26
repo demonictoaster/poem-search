@@ -9,4 +9,11 @@ To build the backend container:
 
 To run the backend container run: 
 
-`docker run -d --name mycontainer -p 8000:80 poem-search-api`
+`docker run -d --name backend -p 8000:80 poem-search-api`
+
+# Frontend
+Same procedure:
+
+`cd frontend`
+`docker build -t poem-search-frontend .`
+`docker run -d --name frontend -p 3000:80 poem-search-frontend`

@@ -18,7 +18,8 @@ function PoemSearch() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()  // prevent page from reloading when submitting
-    const response = await axios.post('http://127.0.0.1:8000/predict', { query });
+    const API_URL = process.env.REACT_APP_API_URL;
+    const response = await axios.post(API_URL, { query });
     setData(response.data)
   }
 
