@@ -19,3 +19,6 @@ Same procedure:
 `docker build -t poem-search-frontend .`
 
 `docker run -d --name frontend -p 3000:80 poem-search-frontend`
+
+# Example
+![Alt text](example/screenshot.png?raw=true "Screenshot")
